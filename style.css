@@ -1,0 +1,98 @@
+/* Establecer la imagen de fondo del tablero */
+body {
+    background-image: url('TableroK.png');
+    background-size: cover; /* Hacer que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilos para el tablero */
+#board {
+    display: flex;
+    flex-direction: column; /* Alinea las notas en una columna */
+    align-items: flex-start; /* Alinea las notas contra el borde izquierdo */
+    margin-top: 15%; /* Espacio adicional en la parte superior */
+    padding: 20px;
+}
+
+/* Estilos para las notas */
+.note {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    width: 25%;
+    margin: 10px 0; /* Margen vertical para separar las notas */
+    padding: 10px;
+    cursor: move;
+    z-index: 1; /* Cada nota debe tener un z-index único */
+}
+
+/* Estilos para el botón "Editar" y "Eliminar" */
+.edit-button,
+.delete-button {
+    background-color: #4CAF50; /* Color de fondo para el botón Editar */
+    color: #fff; /* Color del texto para el botón Editar */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    /*position: absolute;
+    bottom: 5px;
+    right: 10px; /* Alinea los botones a la derecha */
+}
+
+/* Estilo para el botón "Eliminar" */
+.delete-button {
+    background-color: #FF5733; /* Color de fondo para el botón Eliminar */
+}
+
+/* Estilos para la nota de texto */
+.note-text {
+    margin-bottom: 30px; /* Espacio en la parte inferior para dar espacio a los botones */
+}
+
+.note-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+
+
+/* Estilos para el botón "NUEVA NOTA" */
+#newNote {
+    background-color: #3498db; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para la pantalla modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+

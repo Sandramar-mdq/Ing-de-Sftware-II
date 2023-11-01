@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+</head>
+<body>
+  
+    <button id="newNote">NUEVA NOTA</button>
+
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="username" placeholder="Nombre de Usuario" >
+            <textarea id="noteText" placeholder="Texto de la Nota"></textarea>
+            <button id="saveNote">CREAR NOTA</button>
+        </div>
+    </div>
+
+    <div id="board">
+        <!-- Aquí se agregarán las notas dinámicamente -->
+    </div>
+
+    <script>
+        // Tu código JavaScript para la comunicación con el servidor Socket.IO
+        const socket = io(); // Inicializa la conexión Socket.IO
+    </script>
+    <script src="client.js"></script> <!-- Aquí debes cargar tu archivo JavaScript -->
+</body>
+</html>
+
